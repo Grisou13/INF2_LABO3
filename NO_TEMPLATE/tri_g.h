@@ -29,11 +29,11 @@ template <typename T, typename U>
 void tri(std::vector<T>& v){
    //bubble sort
    int i, j;
-   U predicat();
+   U predicat = U();
 
    for (i = 0; i < (int)v.size() - 1; i++)    
       for (j = 0; j < (int)v.size() - i - 1; j++) 
-         if (U(v[j],v[j+1])){
+         if (predicat(v[j],v[j+1])){
             T tmp = v[j];
             v[j] = v[j+1];
             v[j+1] = tmp;
